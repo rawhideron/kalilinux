@@ -33,7 +33,7 @@ You can now connect to the container by launching your favourite remote access s
 - ssh / x2goserver on port 20022
 - vnc on port 5908 / display :8
 
-All user names are `kaliuser` and all passwords are `onemarcfifty`
+All user names are `kaliuser` and all passwords are `###########'
 
 ## more info
 
