@@ -9,7 +9,7 @@ The build script lets you chose
 - which Kali Packages to install (core, default everything and so on)
 - which Desktop environment to use ( xfce, kde, gnome, mate etc.)
 
-## how to build
+## run build
 
 Download all the files into a subdirectory on your linux docker host, e.g. /home/marc/kali-linux docker
 then cd into that directory and run
