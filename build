@@ -11,6 +11,7 @@ XRDP_PORT=13389
 XVNC_DISPLAY=8
 XVNC_PORT=590${XVNC_DISPLAY}
 XSSH_PORT=20022
+DOCK_PASSWORD=${DOCK_PASSWORD:-Batman298}
 
 # ##########################################################################
 # Variables (For menu choice - should not be changed)
@@ -111,6 +112,7 @@ docker build \
         --build-arg VNC_PORT=$XVNC_PORT \
         --build-arg VNC_DISPLAY=$XVNC_DISPLAY \
         --build-arg SSH_PORT=$XSSH_PORT \
+        --build-arg DOCK_PASSWORD=$DOCK_PASSWORD \
         .
 
 # ##########################################

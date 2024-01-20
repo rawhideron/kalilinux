@@ -28,6 +28,8 @@ ARG SSH_PORT
 ARG RDP_PORT
 ARG VNC_PORT
 ARG VNC_DISPLAY
+ARG DOCK_PASSWORD
+
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -40,6 +42,8 @@ ENV DEBIAN_FRONTEND noninteractive
 
 ENV DESKTOP_ENVIRONMENT=${DESKTOP_ENVIRONMENT:-xfce}
 ENV DESKTOP_PKG=kali-desktop-${DESKTOP_ENVIRONMENT}
+ENV DOCK_PASSWORD=${DOCK_PASSWORD}
+
 
 # #####################################################
 # the remote client to use
@@ -86,7 +90,7 @@ RUN apt -y install --no-install-recommends ${KALI_PKG}
 # #####################################################
 
 RUN useradd -m -s /bin/bash -G sudo kaliuser
-RUN echo 'kaliuser:Batman298' | chpasswd
+RUN echo 'kaliuser:i${DOCK_PASSWORD}}' | chpasswd
 
 # #####################################################
 # change the ssh port in /etc/ssh/sshd_config
