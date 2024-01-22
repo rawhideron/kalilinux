@@ -90,7 +90,7 @@ RUN apt -y install --no-install-recommends ${KALI_PKG}
 # #####################################################
 
 RUN useradd -m -s /bin/bash -G sudo kaliuser
-RUN echo 'kaliuser:i${DOCK_PASSWORD}}' | chpasswd
+RUN echo 'kaliuser:${DOCK_PASSWORD}}' | chpasswd
 
 # #####################################################
 # change the ssh port in /etc/ssh/sshd_config
